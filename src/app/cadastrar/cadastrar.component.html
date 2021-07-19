@@ -1,0 +1,67 @@
+<div class="bg-main-theme">
+  <div class="container d-flex justify-content-center" style="padding-bottom: 170px; padding-top: 100px;">
+    <div class="card" style="width: 34rem; height: 73rem;">
+      <div style="width:200px ; height:200 px" class="container d-flex justify-content-center mt-2">
+        <a routerLink='/quemsomos'>
+          <img class="card-img-top my-2"
+            src="https://media.discordapp.net/attachments/844560082217074758/860252119759454228/edit-logo.png"
+            alt="Logo Rede Antônias">
+        </a>
+      </div>
+      <div class="card-body">
+        <h3 class="mt-1 mb-2 text-center">Cadastre-se</h3>
+        <form>
+          <div class="form-group mb-2 mt-1">
+            <label for="inputNome">Nome</label>
+            <input [(ngModel)]='usuario.nome' type="text" class="form-control" id="inputNome"
+              placeholder="Nome Completo" name='nome'>
+          </div>
+          <div class="form-group">
+            <label for='inputPhoto'>Sua foto de perfil</label>
+            <input [(ngModel)]='usuario.foto' type="text" class="form-control" id="inputPhoto" placeholder="cole o Link"
+              name='foto'>
+          </div>
+          <div class="form-group mb-2">
+            <label for="inputEmail4">Email válido</label>
+            <input [(ngModel)]='usuario.email' type="email" class="form-control" id="inputEmail4"
+              placeholder="Digite seu Email" name='email'>
+          </div>
+          <div class="form-group mb-2">
+            <label for="inputPassword4">Senha</label>
+            <input (input)='confirmSenha($event)' type="password" class="form-control" id="inputPassword4"
+              placeholder="Senha">
+          </div>
+          <div class="form-group mb-2">
+            <label for="inputPassword">Confirme Senha</label>
+            <input [(ngModel)]='usuario.senha' type="password" class="form-control" id="inputPassword"
+              placeholder="Confirmar Senha" name='confirmarSenha'>
+          </div>
+          <div class="form-group mb-2">
+            <div class="mt-2">
+              <label for="inputBirthDate">Data de Nascimento</label>
+              <div class="row mb-2" style="margin-left: 3.0px;">
+                <input [(ngModel)]='usuario.dataAniversario' type="date" name="birthDate" id="inputBirthDate">
+              </div>
+              <div class="my-5 text-center row mb-2">
+                <div class="col-6 ">
+                  <input type="radio" id='vendedora' name='vendedora' (change)="tipoUser($event)"
+                    value="vendedora"><strong> Vendedora</strong>
+                  <img width="250" height="200px" src="https://i.imgur.com/GP8GuEe.png" alt="vendedorClick">
+                </div>
+                <div class="col-6">
+                  <input type="radio" id='consumidor' name='consumidor' (change)="tipoUser($event)"
+                    value="consumidor"><strong> Consumidor</strong>
+                  <img width="250" height="200px" src="https://i.imgur.com/AVtsPHf.png" alt="consumidorClick">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center kg-16 mt-2">
+            <button type="submit" class="btn btn-danger cancelarlink" routerLink="/quemsomos">Cancelar</button>
+            <button type="submit" class="btn btn-success ml-3" (click)='cadastrar()'>Cadastrar</button>
+          </div>
+        </form>
+        <hr>
+        <p class="txtcadastrar text-center">Já tem uma conta? <a routerLink='/entrar'>Faça login aqui</a></p>
+      </div>
+    </div>

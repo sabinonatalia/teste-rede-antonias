@@ -1,0 +1,36 @@
+<div class="container d-flex justify-content-center bg-main-theme" style="padding-bottom: 170px; padding-top: 100px;">
+  <div class="card" style="width: 32rem; height: 32rem;">
+    <div style="width:200px ; height:200 px" class="container d-flex justify-content-center mt-2">
+      <a routerLink='/quemsomos'>
+        <img class="card-img-top my-2"
+          src="https://media.discordapp.net/attachments/844560082217074758/860252119759454228/edit-logo.png"
+          alt="Logo Rede Antônias">
+      </a>
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="form-group mb-2 mt-1">
+          <label for="exampleInputEmail1">E-mail</label>
+          <input [(ngModel)]='usuario.email' type="email" class="form-control" id="emailInput" placeholder="Email"
+            name='email'>
+          <small id="emailHelp" class="form-text text-muted"></small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Senha</label>
+          <input [(ngModel)]='usuario.senha' type="password" class="form-control" id="exampleInputPassword1"
+            placeholder="Senha" name='senha'>
+        </div>
+        <div class="form-group form-check mb-2">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Lembre-se de mim</label>
+        </div>
+        <div class="d-flex justify-content-center mt-0">
+          <button type="submit" class="btn btn-danger cancelarlink" routerLink="/quemsomos">Cancelar</button>
+          <button type="submit" class="btn btn-success ml-3" (click)='entrar()'>Entrar</button>
+        </div>
+        <hr class="mt-2 mb-1">
+        <p class="txtcadastrar text-center">Não tem uma conta?<a routerLink="/cadastrar"> Cadastre-se</a></p>
+      </form>
+    </div>
+  </div>
+</div>

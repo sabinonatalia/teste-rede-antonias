@@ -1,0 +1,47 @@
+.cor-bg{
+    background-color: #E28553;
+}
+
+.cor-bg2{
+    background-color: #e7966a;
+}
+.bg-main-theme{
+    background-color: #FFE4CF;
+}
+/* You can add global styles to this file, and also import other style files */
+.cor-bg-mp{
+    background-color:#bd5d3fe8;
+}
+.cor-bg-mps{
+    background-color:#cc8960;
+}
+.cor-bg-rodape{
+    background-color: #bd5d3fe8;
+}
+
+.cor-teste{
+
+    /*background-color:  #672901;*/
+    /*background-color: #3f2516;*/
+    background-color: #1B0C01;
+
+    /*1B0C01*/
+    /*221309*/
+    /*
+    #100f0d; #672901; #a05744; #bf7e6a; #d7baa8; #d9d4d1, #f8f3ef; #ffe4cf; 
+    */
+}
+
+.cor-teste2{
+
+    background-color: #664126 ;
+}
+
+.cor-teste3{
+
+    /*background-color: #664126;*/
+    background-color: #695343 ;
+}
+.txt-size{
+    font-size: 20pt;
+}

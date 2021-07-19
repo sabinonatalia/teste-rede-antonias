@@ -1,0 +1,43 @@
+<div class="container mt-3 mb-5">
+
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <h1 class="text-center ">Pesquisa por </h1>
+            <h2 class="text-center ">"{{busca}}"</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        
+<div class="container">
+    <div class="d-flex justify-content-around m-3 row">
+        <div [routerLink]="['/ver-produto',produto.id]" class="card mt-5" style="width: 14rem;" *ngFor='let produto of listaProdutosServicos'>
+            <!--Criei o <a> para conseguir colocar o redirecionamento quando a pessoa clicar, colocarem todo o card depois-->
+            <a [routerLink]="['/ver-produto',produto.id]"><img width="100px" height="200px" class="card-img-top"
+                    src="{{produto.midias}}" alt="Imagem de capa do card"></a>
+            <div class="card-body">
+                <p>{{produto.nomeProdutosServicos}}</p>
+                <h4 class="card-text">R${{produto.preco}}</h4>
+            </div>
+        </div>
+    </div>
+</div>
+    
+        <!-- <div class="col-sm-4 mb-3" *ngFor='let produto of listaProd'>
+
+            
+            <div class="card" [routerLink]="['/produto', produto.id]">
+                <div class="d-flex justify-content-center">
+                    <img class="img-fluid" alt="Imagem do produto" src="{{produto.imagem}}">
+                </div>
+                <div class="card-body text-center">
+                    <h4 class="nome">{{produto.nome}}</h4>
+                    <small class="text-muted">{{produto.categoria.nome}}</small>
+                    <p id="preco">R$ {{produto.valor.toFixed(2).replace('.', ',')}}</p>
+                    <a class="btn btn-verde w-100" [routerLink]="['/produto',produto.id]">Ver produto</a>
+                </div>
+            </div>
+
+        </div> -->
+    </div>
+</div>

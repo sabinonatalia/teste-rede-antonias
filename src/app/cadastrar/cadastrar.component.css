@@ -1,0 +1,26 @@
+.kg-16{
+    border-bottom: 1px solid #0000;
+    margin-bottom: 15px;
+}
+
+.bg-main-theme{
+    background-color: #FFE4CF;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.cor-teste2{
+    box-sizing: border-box;
+    background: rgba(0, 0, 0,0.5);
+ }
+ 
+ .teste3{
+    background: rgb(27,12,1);
+ background: linear-gradient(90deg, rgba(27,12,1,1) 0%, rgba(103,41,1,1) 100%, rgba(102,65,38,1) 100%);
+ min-width: 100vw;
+    min-height: 100vh;
+ }
+
+.txtcadastrar{
+    font-size: 14px;
+}

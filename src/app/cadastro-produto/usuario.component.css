@@ -1,0 +1,12 @@
+.card-cor{
+    /*background: rgba(0, 0, 0, 0.2);*/
+    background-color: #f0efefe2;
+    box-sizing: border-box;
+}
+.text-marrom{
+    color: #1B0C01;
+}
+.btn-sair:hover{
+    background-color: red;
+    color: #FFFFFF;
+}

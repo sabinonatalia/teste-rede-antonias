@@ -1,0 +1,109 @@
+<div class="cor-teste2">
+    <!--<div class="cor-bg">-->
+    <div class=" container" style="height: 40px;">
+        <div class="row">
+            <div class="col d-flex justify-content-center" style="margin-top: 8px;">
+                <a href="" class=" text-light">Vestuário
+                </a>
+            </div>
+            <div class="col d-flex justify-content-center" style="margin-top: 8px;">
+                <a href="" class=" text-light">Alimentos</a>
+            </div>
+            <div class="col d-flex justify-content-center" style="margin-top: 8px;">
+                <a href="" class=" text-light">Bungiganga</a>
+            </div>
+            <div class="col d-flex justify-content-center" style="margin-top: 8px;">
+                <a href="" class=" text-light">Doces</a>
+            </div>
+            <div class="col d-flex justify-content-center" style="margin-top: 8px;">
+                <a href="" class=" text-light">Marionetes</a>
+            </div>
+            <div class="col d-flex justify-content-center" style="margin-top: 8px;">
+                <a href="" class=" text-light">Eletrônicos</a>
+            </div>
+            <div class="col d-flex justify-content-center" style="margin-top: 8px;">
+                <a href="" class=" text-light">Artesanais</a>
+            </div>
+            <div class="col d-flex justify-content-center" style="margin-top: 8px;">
+                <a href="" class=" text-light">Veganos</a>
+            </div>
+            <div class="col d-flex justify-content-center" style="margin-top: 8px;">
+                <a href="" class=" text-light">Educação</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5 text-lg-center">
+    <div class="row d-flex justify-content-center">
+        <div class="col-6">
+            <img class="d-block w-100" height="511px" src="{{produto.midias}}" alt="Primeiro Slide">
+        </div>
+        <div class="col-6">
+            <h2 class="mt-5">{{produto.nomeProdutosServicos}}</h2>
+            <h5 class="mt-3">Estoque: {{produto.estoqueVendedor}}</h5>
+            <!--Não está pulado linha-->
+            {{produto.descricao}}
+
+            <h3 class="mt-3">R$ {{produto.preco}}</h3>
+
+            <!--Botão para adicionar mais um objeto e/ou menos um-->
+            <!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons
+            <div class="input-group plus-minus-input">
+                <div class="input-group-button">
+                    <button type="button" class="button hollow circle" data-quantity="minus" data-field="quantity">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <input class="input-group-field" type="number" name="quantity" value="0">
+                <div class="input-group-button">
+                    <button type="button" class="button hollow circle" data-quantity="plus" data-field="quantity">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            -->
+            <div class="mt-2 mb-3">
+                <button type="button" class="btn btn-success btn-md">Comprar</button>
+            </div>
+            <div class="mb-2" style="font-size: 20px">
+                <a href=""><i class="fa fa-thumbs-o-up mr-2" aria-hidden="true"></i></a>
+
+                <a href=""><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
+
+            </div>
+            <h6 class="text-secondary">Produto de: {{produto.usuario.nome}}</h6>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-5 text-center">
+            <h5 class="mt-5 cor-teste text-white txt-size">Outros produtos</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="d-flex justify-content-around m-3 row ">
+            <div class="card mt-3" style="width: 14rem;" *ngFor='let produto of listaProduto'>
+                <!--Criei o <a> para conseguir colocar o redirecionamento quando a pessoa clicar, colocarem todo o card depois-->
+                <a routerLink='/ver-produto'><img width="100px" height="200px" class="card-img-top"
+                        src="{{produto.midias}}" alt="Imagem de capa do card"></a>
+                <div class="card-body">
+                    <p>{{produto.nomeProdutosServicos}}</p>
+                    <h4 class="card-text">R${{produto.preco}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="d-flex justify-content-between m-5 row ">
+    <div class="card" style="width: 14rem;" *ngFor='let produto of listaProduto'>
+        Criei o <a> para conseguir colocar o redirecionamento quando a pessoa clicar, colocarem todo o card depois-->
+<!--<a routerLink='/ver-produto'><img class="card-img-top" src="{{produto.midias}}" alt="Imagem de capa do card"></a>
+        <div class="card-body">
+            <p>{{produto.nomeProdutosServicos}}</p>
+            <h4 class="card-text">{{produto.preco}}</h4>
+        </div>
+    </div>
+</div>-->
